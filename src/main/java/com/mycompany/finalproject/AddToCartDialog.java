@@ -4,6 +4,8 @@
  */
 package com.mycompany.finalproject;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author YTAC
@@ -15,12 +17,21 @@ public class AddToCartDialog extends java.awt.Dialog {
      */
     
     int intAmount;
+    ArrayList<Top> cart;
+    Product product;
     
-    public AddToCartDialog(java.awt.Frame parent, boolean modal, String name, double prices) {
+    public AddToCartDialog(java.awt.Frame parent, boolean modal, Product product, ArrayList<Top> cart) {
         super(parent, modal);
         initComponents();
-        shirtname.setText(name);
-        price.setText(String.format("Price: %.2f Pesos", prices));
+        this.setTitle(product.getProductName());
+        setLocationRelativeTo(null);
+        shirtIcon.setIcon(product.getProductIcon());
+        shirtname.setText(product.getProductName());
+        price.setText(String.format(
+                "Price: %.2f Pesos", 
+                product.getProductPrice()));
+        this.cart = cart;
+        this.product = product;
     }
 
     /**
@@ -31,16 +42,16 @@ public class AddToCartDialog extends java.awt.Dialog {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
-        jRadioButton3 = new javax.swing.JRadioButton();
+        shirtIcon = new javax.swing.JLabel();
+        small = new javax.swing.JRadioButton();
+        medium = new javax.swing.JRadioButton();
+        large = new javax.swing.JRadioButton();
         addbtn = new javax.swing.JButton();
         amount = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
-        jRadioButton4 = new javax.swing.JRadioButton();
-        jRadioButton5 = new javax.swing.JRadioButton();
-        jRadioButton6 = new javax.swing.JRadioButton();
+        xlarge = new javax.swing.JRadioButton();
+        xsmall = new javax.swing.JRadioButton();
+        xxxlarge = new javax.swing.JRadioButton();
         price = new javax.swing.JLabel();
         shirtname = new javax.swing.JLabel();
 
@@ -51,26 +62,35 @@ public class AddToCartDialog extends java.awt.Dialog {
             }
         });
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/8ballback.png"))); // NOI18N
-        jLabel1.setToolTipText("");
+        shirtIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/8ballback.png"))); // NOI18N
+        shirtIcon.setToolTipText("");
 
-        jRadioButton1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jRadioButton1.setText("Small");
-        jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
+        small.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        small.setText("Small");
+        small.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton1ActionPerformed(evt);
+                smallActionPerformed(evt);
             }
         });
 
-        jRadioButton2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jRadioButton2.setText("Medium");
+        medium.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        medium.setText("Medium");
+        medium.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mediumActionPerformed(evt);
+            }
+        });
 
-        jRadioButton3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jRadioButton3.setText("Large");
+        large.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        large.setText("Large");
+        large.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                largeActionPerformed(evt);
+            }
+        });
 
         addbtn.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         addbtn.setText("Add to cart");
-        addbtn.setEnabled(false);
         addbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 addbtnActionPerformed(evt);
@@ -87,19 +107,29 @@ public class AddToCartDialog extends java.awt.Dialog {
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel2.setText("Amount:");
 
-        jRadioButton4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jRadioButton4.setText("X-Large");
-
-        jRadioButton5.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jRadioButton5.setText("X-Small");
-        jRadioButton5.addActionListener(new java.awt.event.ActionListener() {
+        xlarge.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        xlarge.setText("X-Large");
+        xlarge.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton5ActionPerformed(evt);
+                xlargeActionPerformed(evt);
             }
         });
 
-        jRadioButton6.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jRadioButton6.setText("XXX-Large");
+        xsmall.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        xsmall.setText("X-Small");
+        xsmall.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                xsmallActionPerformed(evt);
+            }
+        });
+
+        xxxlarge.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        xxxlarge.setText("XXX-Large");
+        xxxlarge.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                xxxlargeActionPerformed(evt);
+            }
+        });
 
         price.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         price.setText("price");
@@ -114,22 +144,22 @@ public class AddToCartDialog extends java.awt.Dialog {
             .addGroup(layout.createSequentialGroup()
                 .addGap(73, 73, 73)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
+                    .addComponent(shirtIcon)
                     .addComponent(price)
                     .addComponent(shirtname))
                 .addGap(43, 43, 43)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(addbtn)
-                    .addComponent(jRadioButton2)
-                    .addComponent(jRadioButton3)
-                    .addComponent(jRadioButton4)
+                    .addComponent(medium)
+                    .addComponent(large)
+                    .addComponent(xlarge)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(amount, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jRadioButton6)
-                    .addComponent(jRadioButton1)
-                    .addComponent(jRadioButton5))
+                    .addComponent(xxxlarge)
+                    .addComponent(small)
+                    .addComponent(xsmall))
                 .addContainerGap(31, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -139,18 +169,18 @@ public class AddToCartDialog extends java.awt.Dialog {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(13, 13, 13)
-                        .addComponent(jRadioButton5)
+                        .addComponent(xsmall)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jRadioButton1)
+                        .addComponent(small)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jRadioButton2)
+                        .addComponent(medium)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jRadioButton3)
+                        .addComponent(large)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jRadioButton4)
+                        .addComponent(xlarge)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jRadioButton6))
-                    .addComponent(jLabel1))
+                        .addComponent(xxxlarge))
+                    .addComponent(shirtIcon))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
@@ -178,27 +208,125 @@ public class AddToCartDialog extends java.awt.Dialog {
         setVisible(false);
         dispose();
     }//GEN-LAST:event_closeDialog
-
+    
+    private void deselectAll() {
+        xsmall.setSelected(false);
+        small.setSelected(false);
+        medium.setSelected(false);
+        large.setSelected(false);
+        xlarge.setSelected(false);
+        xxxlarge.setSelected(false);
+    }
+    
     private void amountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_amountActionPerformed
-        try {
-            intAmount = Integer.parseInt(amount.getText());
-        } catch (NumberFormatException nfe) {
-            return;
-        }
-        addbtn.setEnabled(true);
+
     }//GEN-LAST:event_amountActionPerformed
 
-    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton1ActionPerformed
+    private void smallActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_smallActionPerformed
+        
+        deselectAll();
+        small.setSelected(true);
+        
+    }//GEN-LAST:event_smallActionPerformed
 
-    private void jRadioButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton5ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton5ActionPerformed
+    private void xsmallActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_xsmallActionPerformed
+        
+        deselectAll();
+        xsmall.setSelected(true);
+        
+    }//GEN-LAST:event_xsmallActionPerformed
 
     private void addbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addbtnActionPerformed
-        // TODO add your handling code here:
+        int intAmount;
+        
+        try {
+            intAmount = Integer.parseInt(amount.getText());
+        } catch (Exception e) {
+            return;
+        }
+        
+        String size = null;
+        boolean hasSize = false;
+        
+        if (xsmall.isSelected()) {
+            size = "X-Small";
+            hasSize = true;
+        }
+        
+        if (small.isSelected()) {
+            size = "Small";
+            hasSize = true;
+        }
+        
+        if (medium.isSelected()) {
+            size = "Medium";
+            hasSize = true;
+        }
+        
+        if (large.isSelected()) {
+            size = "Large";
+            hasSize = true;
+        }
+        
+        if (xlarge.isSelected()) {
+            size = "X-Large";
+            hasSize = true;
+        }
+        
+        if (xxxlarge.isSelected()) {
+            size = "XXX-Large";
+            hasSize = true;
+        }
+        
+        if (!hasSize) {
+            return;
+        }
+        
+        for (Top orderOnCart: cart) {
+            
+            if (orderOnCart.getProductName().equals(product.getProductName())
+                    && orderOnCart.getSize().equals(size)) {
+                
+                orderOnCart.addAmount(intAmount);
+                
+                setVisible(false);
+                dispose();
+                return;
+            }
+            
+        }
+        
+        Top order = new Top(
+                product.getProductIcon(), 
+                product.getProductName(), 
+                product.getProductPrice(),
+                intAmount,
+                size);
+        
+        cart.add(order);
+        setVisible(false);
+        dispose();
     }//GEN-LAST:event_addbtnActionPerformed
+
+    private void mediumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mediumActionPerformed
+        deselectAll();
+        medium.setSelected(true);
+    }//GEN-LAST:event_mediumActionPerformed
+
+    private void largeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_largeActionPerformed
+        deselectAll();
+        large.setSelected(true);
+    }//GEN-LAST:event_largeActionPerformed
+
+    private void xlargeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_xlargeActionPerformed
+        deselectAll();
+        xlarge.setSelected(true);
+    }//GEN-LAST:event_xlargeActionPerformed
+
+    private void xxxlargeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_xxxlargeActionPerformed
+        deselectAll();
+        xxxlarge.setSelected(true);
+    }//GEN-LAST:event_xxxlargeActionPerformed
 
     /**
      * @param args the command line arguments
@@ -208,15 +336,15 @@ public class AddToCartDialog extends java.awt.Dialog {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton addbtn;
     private javax.swing.JTextField amount;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JRadioButton jRadioButton3;
-    private javax.swing.JRadioButton jRadioButton4;
-    private javax.swing.JRadioButton jRadioButton5;
-    private javax.swing.JRadioButton jRadioButton6;
+    private javax.swing.JRadioButton large;
+    private javax.swing.JRadioButton medium;
     private javax.swing.JLabel price;
+    private javax.swing.JLabel shirtIcon;
     private javax.swing.JLabel shirtname;
+    private javax.swing.JRadioButton small;
+    private javax.swing.JRadioButton xlarge;
+    private javax.swing.JRadioButton xsmall;
+    private javax.swing.JRadioButton xxxlarge;
     // End of variables declaration//GEN-END:variables
 }

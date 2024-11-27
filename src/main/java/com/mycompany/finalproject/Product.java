@@ -10,16 +10,32 @@ import javax.swing.ImageIcon;
  *
  * @author YTAC
  */
-public abstract class Product {
+public class Product {
     
-    private final String name;
-    private final double price;
-    private final ImageIcon icon;
+    String name;
+    private double price;
+    private ImageIcon icon;
+    private int amount;
+    private double total;
     
     Product(ImageIcon icon, String name, double price) {
         this.name = name;
         this.icon = icon;
         this.price = price;
+        this.total = this.price * this.amount;
+    }
+    
+    public void addAmount(int amount) {
+        this.amount += amount;
+        this.total = this.price * this.amount;
+    }
+    
+    public int getAmount() {
+        return this.amount;
+    }
+    
+    public double getTotal() {
+        return this.total;
     }
     
     public double getProductPrice() {

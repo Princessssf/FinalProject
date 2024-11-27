@@ -4,6 +4,9 @@
  */
 package com.mycompany.finalproject;
 
+import java.util.ArrayList;
+import javax.swing.ImageIcon;
+
 /**
  *
  * @author YTAC
@@ -13,6 +16,9 @@ public class Main extends javax.swing.JFrame {
     /**
      * Creates new form Main
      */
+    
+    ArrayList<Top> cart =  new ArrayList<>();
+    
     public Main() {
         initComponents();
         setLocationRelativeTo(null);
@@ -40,28 +46,28 @@ public class Main extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jButton4 = new javax.swing.JButton();
+        add8ball = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        jButton5 = new javax.swing.JButton();
+        addGV = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
-        jButton6 = new javax.swing.JButton();
+        addacidwash = new javax.swing.JButton();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
-        jButton7 = new javax.swing.JButton();
+        addyzk = new javax.swing.JButton();
         jLabel14 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
-        jButton8 = new javax.swing.JButton();
+        addjapanese = new javax.swing.JButton();
         jLabel17 = new javax.swing.JLabel();
-        jButton9 = new javax.swing.JButton();
+        addjapanesewhite = new javax.swing.JButton();
         jLabel18 = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
-        jButton10 = new javax.swing.JButton();
+        addwhiteflower = new javax.swing.JButton();
         jLabel20 = new javax.swing.JLabel();
         jLabel21 = new javax.swing.JLabel();
         jButton11 = new javax.swing.JButton();
@@ -70,7 +76,7 @@ public class Main extends javax.swing.JFrame {
         jPanel3 = new javax.swing.JPanel();
         jLabel22 = new javax.swing.JLabel();
         jLabel23 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        addDLTE = new javax.swing.JButton();
         jLabel24 = new javax.swing.JLabel();
         jLabel25 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
@@ -102,7 +108,7 @@ public class Main extends javax.swing.JFrame {
         setResizable(false);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jLabel1.setText("Hypelayer");
+        jLabel1.setText("HypeRlayer");
 
         topsbtn.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         topsbtn.setText("Tops");
@@ -174,13 +180,13 @@ public class Main extends javax.swing.JFrame {
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/8ballfront.png"))); // NOI18N
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel4.setText("8-Ball");
+        jLabel4.setText("HYPERLAYER 8BALL BASIC TEES");
 
-        jButton4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jButton4.setText("Add to Cart");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        add8ball.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        add8ball.setText("Add to Cart");
+        add8ball.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                add8ballActionPerformed(evt);
             }
         });
 
@@ -189,13 +195,13 @@ public class Main extends javax.swing.JFrame {
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/GVback.png"))); // NOI18N
 
         jLabel7.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel7.setText("Good-Vibe");
+        jLabel7.setText("HYPERLAYER GOOD-VIBES BASIC TEES");
 
-        jButton5.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jButton5.setText("Add to Cart");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        addGV.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        addGV.setText("Add to Cart");
+        addGV.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                addGVActionPerformed(evt);
             }
         });
 
@@ -204,13 +210,13 @@ public class Main extends javax.swing.JFrame {
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/acidwashback.png"))); // NOI18N
 
         jLabel10.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel10.setText("Acidwash");
+        jLabel10.setText("HYPERLAYER ACIDWASH BASIC TEES");
 
-        jButton6.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jButton6.setText("Add to Cart");
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
+        addacidwash.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        addacidwash.setText("Add to Cart");
+        addacidwash.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
+                addacidwashActionPerformed(evt);
             }
         });
 
@@ -219,13 +225,13 @@ public class Main extends javax.swing.JFrame {
         jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/yzkfront.jpg"))); // NOI18N
 
         jLabel13.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel13.setText("YZK");
+        jLabel13.setText("HYPERLAYER YZK BASIC TEES");
 
-        jButton7.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jButton7.setText("Add to Cart");
-        jButton7.addActionListener(new java.awt.event.ActionListener() {
+        addyzk.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        addyzk.setText("Add to Cart");
+        addyzk.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton7ActionPerformed(evt);
+                addyzkActionPerformed(evt);
             }
         });
 
@@ -234,44 +240,44 @@ public class Main extends javax.swing.JFrame {
         jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/japanese style hoodie.png"))); // NOI18N
 
         jLabel16.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel16.setText("Japanese-Style Hoodie");
+        jLabel16.setText("HYPERLAYER JAPANESE HOODIE");
 
-        jButton8.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jButton8.setText("Add to Cart");
-        jButton8.addActionListener(new java.awt.event.ActionListener() {
+        addjapanese.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        addjapanese.setText("Add to Cart");
+        addjapanese.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton8ActionPerformed(evt);
+                addjapaneseActionPerformed(evt);
             }
         });
 
         jLabel17.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel17.setText("Japanese-Style White Hoodie");
+        jLabel17.setText("HYPERLAYER JAPANESE WHITE HOODIE");
 
-        jButton9.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jButton9.setText("Add to Cart");
-        jButton9.addActionListener(new java.awt.event.ActionListener() {
+        addjapanesewhite.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        addjapanesewhite.setText("Add to Cart");
+        addjapanesewhite.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton9ActionPerformed(evt);
+                addjapanesewhiteActionPerformed(evt);
             }
         });
 
         jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/cross style hoodie.png"))); // NOI18N
 
         jLabel19.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel19.setText("White Flower Hoodie");
+        jLabel19.setText("HYPERLAYER WHITE FLOWER HOODIE");
 
-        jButton10.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jButton10.setText("Add to Cart");
-        jButton10.addActionListener(new java.awt.event.ActionListener() {
+        addwhiteflower.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        addwhiteflower.setText("Add to Cart");
+        addwhiteflower.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton10ActionPerformed(evt);
+                addwhiteflowerActionPerformed(evt);
             }
         });
 
         jLabel20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/white  flower hoodie style.png"))); // NOI18N
 
         jLabel21.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel21.setText("Cross-Style Hoodie");
+        jLabel21.setText("HYPERLAYER CROSS HOODIE");
 
         jButton11.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jButton11.setText("Add to Cart");
@@ -286,54 +292,40 @@ public class Main extends javax.swing.JFrame {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(247, 247, 247)
-                .addComponent(jLabel4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel7)
-                .addGap(199, 199, 199))
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(238, 238, 238)
-                .addComponent(jLabel10)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel13)
-                .addGap(218, 218, 218))
-            .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addGroup(jPanel2Layout.createSequentialGroup()
-                            .addGap(197, 197, 197)
-                            .addComponent(jLabel16)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel17))
                         .addGroup(jPanel2Layout.createSequentialGroup()
                             .addGap(164, 164, 164)
                             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addGroup(jPanel2Layout.createSequentialGroup()
-                                    .addComponent(jLabel20)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jLabel18))
-                                .addGroup(jPanel2Layout.createSequentialGroup()
                                     .addComponent(jLabel15)
                                     .addGap(278, 278, 278)
-                                    .addComponent(jLabel14))))
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addGroup(jPanel2Layout.createSequentialGroup()
-                                    .addGap(205, 205, 205)
-                                    .addComponent(jButton10)
+                                    .addComponent(jLabel14))
+                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                                    .addComponent(jLabel20)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jButton11))
-                                .addGroup(jPanel2Layout.createSequentialGroup()
-                                    .addGap(196, 196, 196)
-                                    .addComponent(jLabel19)
-                                    .addGap(349, 349, 349)
-                                    .addComponent(jLabel21)))
-                            .addGap(52, 52, 52)))
+                                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(jPanel2Layout.createSequentialGroup()
+                                            .addGap(6, 6, 6)
+                                            .addComponent(jLabel21))
+                                        .addComponent(jLabel18)))))
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                            .addGap(161, 161, 161)
+                            .addComponent(jLabel16)
+                            .addGap(253, 253, 253)
+                            .addComponent(jLabel17)
+                            .addGap(52, 52, 52))
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                            .addGap(208, 208, 208)
+                            .addComponent(addwhiteflower)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jButton11)
+                            .addGap(126, 126, 126)))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(208, 208, 208)
-                        .addComponent(jButton8)
+                        .addComponent(addjapanese)
                         .addGap(381, 381, 381)
-                        .addComponent(jButton9))
+                        .addComponent(addjapanesewhite))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(57, 57, 57)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -357,17 +349,35 @@ public class Main extends javax.swing.JFrame {
                                 .addComponent(jLabel12)))))
                 .addContainerGap(21, Short.MAX_VALUE))
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(218, 218, 218)
-                .addComponent(jButton4)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(161, 161, 161)
+                        .addComponent(jLabel4))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(222, 222, 222)
+                        .addComponent(add8ball)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton5)
-                .addGap(173, 173, 173))
-            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addComponent(addGV)
+                        .addGap(173, 173, 173))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addComponent(jLabel7)
+                        .addGap(107, 107, 107))))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addGap(214, 214, 214)
-                .addComponent(jButton6)
+                .addComponent(addacidwash)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton7)
+                .addComponent(addyzk)
                 .addGap(171, 171, 171))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(144, 144, 144)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel19)
+                    .addComponent(jLabel10))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel13)
+                .addGap(148, 148, 148))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -379,13 +389,13 @@ public class Main extends javax.swing.JFrame {
                     .addComponent(jLabel5)
                     .addComponent(jLabel6))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
                     .addComponent(jLabel7))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton4)
-                    .addComponent(jButton5))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(addGV)
+                    .addComponent(add8ball))
                 .addGap(36, 36, 36)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel8)
@@ -394,39 +404,39 @@ public class Main extends javax.swing.JFrame {
                     .addComponent(jLabel12))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel10)
-                    .addComponent(jLabel13))
+                    .addComponent(jLabel13)
+                    .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton6)
-                    .addComponent(jButton7))
+                    .addComponent(addacidwash)
+                    .addComponent(addyzk))
                 .addGap(33, 33, 33)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel15)
                     .addComponent(jLabel14))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel16)
-                    .addComponent(jLabel17))
+                    .addComponent(jLabel17)
+                    .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jButton8)
+                        .addComponent(addjapanese)
                         .addGap(40, 40, 40)
                         .addComponent(jLabel20))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jButton9)
+                        .addComponent(addjapanesewhite)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabel18)))
-                .addGap(4, 4, 4)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel19)
                     .addComponent(jLabel21))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton10)
+                    .addComponent(addwhiteflower)
                     .addComponent(jButton11))
-                .addContainerGap(64, Short.MAX_VALUE))
+                .addContainerGap(32, Short.MAX_VALUE))
         );
 
         jScrollPane2.setViewportView(jPanel2);
@@ -441,7 +451,7 @@ public class Main extends javax.swing.JFrame {
             topscardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(topscardLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 582, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -452,15 +462,15 @@ public class Main extends javax.swing.JFrame {
         jLabel22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Dont let the enemy.png"))); // NOI18N
 
         jLabel23.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel23.setText("Dont let the enemy");
+        jLabel23.setText("HYPERPLAYER DONT LET THE ENEMY BRACELET");
 
-        jButton1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jButton1.setText("Add to Cart");
+        addDLTE.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        addDLTE.setText("Add to Cart");
 
         jLabel24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/FOB.png"))); // NOI18N
 
         jLabel25.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel25.setText("FOB");
+        jLabel25.setText("HYPERPLAYER FOB KEYCHAIN");
 
         jButton2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jButton2.setText("Add to Cart");
@@ -468,7 +478,7 @@ public class Main extends javax.swing.JFrame {
         jLabel26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/IGFOX.png"))); // NOI18N
 
         jLabel27.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel27.setText("IGOFX");
+        jLabel27.setText("HYPERPLAYER IGOFX KEYCHAIN");
 
         jButton3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jButton3.setText("Add to Cart");
@@ -476,7 +486,7 @@ public class Main extends javax.swing.JFrame {
         jLabel28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Montblanc.png"))); // NOI18N
 
         jLabel29.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel29.setText("Montblanc");
+        jLabel29.setText("HYPERPLAYER MONTBLANC BRACELET");
 
         jButton12.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jButton12.setText("Add to Cart");
@@ -484,7 +494,7 @@ public class Main extends javax.swing.JFrame {
         jLabel30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Silver.png"))); // NOI18N
 
         jLabel31.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel31.setText("Silver");
+        jLabel31.setText("HYPERPLAYER SILVER BRACELET");
 
         jButton13.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jButton13.setText("Add to Cart");
@@ -492,7 +502,7 @@ public class Main extends javax.swing.JFrame {
         jLabel32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/ZZTOP.png"))); // NOI18N
 
         jLabel33.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel33.setText("ZZ TOP");
+        jLabel33.setText("HYPERPLAYER ZZTOP KEYCHAIN");
 
         jButton14.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jButton14.setText("Add to Cart");
@@ -505,7 +515,7 @@ public class Main extends javax.swing.JFrame {
         jLabel34.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/silverquick .png"))); // NOI18N
 
         jLabel35.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel35.setText("Silverquick");
+        jLabel35.setText("HYPERPLAYER SILVER QUICK BRACELET");
 
         jButton15.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jButton15.setText("Add to Cart");
@@ -514,68 +524,75 @@ public class Main extends javax.swing.JFrame {
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(102, 102, 102)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(jLabel23)
-                        .addGap(288, 288, 288)
-                        .addComponent(jLabel25)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel27)
-                        .addGap(122, 122, 122))
+                        .addGap(58, 58, 58)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel28)
+                            .addComponent(jLabel22)))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(23, 23, 23)
+                        .addComponent(jLabel23)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 81, Short.MAX_VALUE)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                        .addGap(6, 6, 6)
-                        .addComponent(jButton1)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addComponent(jLabel25)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel27))
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addComponent(jLabel30)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel32))
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addComponent(jLabel24)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel26)))
+                        .addGap(40, 40, 40))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel34)
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addGap(337, 337, 337)
+                                .addComponent(jLabel33)))
+                        .addGap(37, 37, 37))))
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                        .addGap(108, 108, 108)
+                        .addComponent(addDLTE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jButton2)
+                        .addGap(233, 233, 233)
+                        .addComponent(jButton3))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(30, 30, 30)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton3)
-                                .addGap(81, 81, 81))
+                            .addComponent(jLabel29)
                             .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addGap(178, 178, 178)
-                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel32)
-                                    .addComponent(jLabel26))
-                                .addGap(46, 46, 46))))))
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(100, 100, 100)
-                .addComponent(jButton12)
-                .addGap(262, 262, 262)
-                .addComponent(jButton13)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 232, Short.MAX_VALUE)
-                .addComponent(jButton14)
+                                .addGap(68, 68, 68)
+                                .addComponent(jButton12)))
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addGap(130, 130, 130)
+                                .addComponent(jLabel31))
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addGap(170, 170, 170)
+                                .addComponent(jButton13)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton14)))
                 .addGap(85, 85, 85))
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(121, 121, 121)
-                .addComponent(jLabel29)
-                .addGap(321, 321, 321)
-                .addComponent(jLabel31)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel33)
-                .addGap(117, 117, 117))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addGap(58, 58, 58)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel28)
-                    .addComponent(jLabel22))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel34)
-                    .addComponent(jLabel24)
-                    .addComponent(jLabel30))
-                .addGap(377, 377, 377))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                        .addComponent(jLabel35)
-                        .addGap(447, 447, 447))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                         .addComponent(jButton15)
-                        .addGap(426, 426, 426))))
+                        .addGap(426, 426, 426))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                        .addComponent(jLabel35)
+                        .addGap(352, 352, 352))))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -584,38 +601,39 @@ public class Main extends javax.swing.JFrame {
                     .addComponent(jLabel22)
                     .addComponent(jLabel24)
                     .addComponent(jLabel26))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel23)
-                    .addComponent(jLabel25)
+                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel23)
+                        .addComponent(jLabel25))
                     .addComponent(jLabel27))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton1)
+                    .addComponent(addDLTE)
                     .addComponent(jButton2)
                     .addComponent(jButton3))
-                .addGap(33, 33, 33)
+                .addGap(21, 21, 21)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel28)
                     .addComponent(jLabel30)
                     .addComponent(jLabel32))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel29)
                     .addComponent(jLabel31)
                     .addComponent(jLabel33))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton12)
-                    .addComponent(jButton13)
-                    .addComponent(jButton14))
+                    .addComponent(jButton14)
+                    .addComponent(jButton13))
                 .addGap(18, 18, 18)
                 .addComponent(jLabel34)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel35)
+                .addComponent(jLabel35, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton15)
-                .addGap(0, 233, Short.MAX_VALUE))
+                .addGap(0, 364, Short.MAX_VALUE))
         );
 
         jScrollPane1.setViewportView(jPanel3);
@@ -632,8 +650,8 @@ public class Main extends javax.swing.JFrame {
             accessoriescardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(accessoriescardLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 591, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 870, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         cards.add(accessoriescard, "card3");
@@ -646,7 +664,7 @@ public class Main extends javax.swing.JFrame {
         );
         cartcardLayout.setVerticalGroup(
             cartcardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 603, Short.MAX_VALUE)
+            .addGap(0, 856, Short.MAX_VALUE)
         );
 
         cards.add(cartcard, "card4");
@@ -716,12 +734,23 @@ public class Main extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(cards, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(cards, javax.swing.GroupLayout.PREFERRED_SIZE, 856, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    
+    private void addingProduct(Product product) {
+        AddToCartDialog dialog = new AddToCartDialog(this, true, product, cart);
+        dialog.setVisible(true);
+        
+        for (int i = 0; i < cart.size(); i++) {
+            System.out.print(cart.get(i).getProductName() + " ");
+            System.out.print(cart.get(i).getSize() + "-" + cart.get(i).getAmount());
+        }
+        
+    }
+    
     private void topsbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_topsbtnActionPerformed
 
         cards.removeAll();
@@ -730,36 +759,52 @@ public class Main extends javax.swing.JFrame {
         cards.revalidate();
     }//GEN-LAST:event_topsbtnActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton4ActionPerformed
+    private void add8ballActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_add8ballActionPerformed
+        ImageIcon icon = new ImageIcon(getClass().getResource("/images/8ballfront.png"));
+        Product product = new Product(icon, "HYPERPLAYER 8BALL", 500);
+        addingProduct(product);
+    }//GEN-LAST:event_add8ballActionPerformed
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton5ActionPerformed
+    private void addGVActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addGVActionPerformed
+        ImageIcon icon = new ImageIcon(getClass().getResource("/images/GVfront.png"));
+        Product product = new Product(icon, "HYPERPLAYER GOODVIBES", 420);
+        addingProduct(product);
+    }//GEN-LAST:event_addGVActionPerformed
 
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton6ActionPerformed
+    private void addacidwashActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addacidwashActionPerformed
+        ImageIcon icon = new ImageIcon(getClass().getResource("/images/acidwashfront.png"));
+        Product product = new Product(icon, "HYPERPLAYER ACID WASH", 250);
+        addingProduct(product);
+    }//GEN-LAST:event_addacidwashActionPerformed
 
-    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton7ActionPerformed
+    private void addyzkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addyzkActionPerformed
+        ImageIcon icon = new ImageIcon(getClass().getResource("/images/yzkfront.png"));
+        Product product = new Product(icon, "HYPERPLAYER YZK", 380);
+        addingProduct(product);
+    }//GEN-LAST:event_addyzkActionPerformed
 
-    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton8ActionPerformed
+    private void addjapaneseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addjapaneseActionPerformed
+        ImageIcon icon = new ImageIcon(getClass().getResource("/images/japanese style hoodie.png"));
+        Product product = new Product(icon, "HYPERPLAYER JAPANESE", 680);
+        addingProduct(product);
+    }//GEN-LAST:event_addjapaneseActionPerformed
 
-    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton9ActionPerformed
+    private void addjapanesewhiteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addjapanesewhiteActionPerformed
+        ImageIcon icon = new ImageIcon(getClass().getResource("/images/white japanese style hoodie.png"));
+        Product product = new Product(icon, "HYPERPLAYER JAPANESE WHITE", 680);
+        addingProduct(product);
+    }//GEN-LAST:event_addjapanesewhiteActionPerformed
 
-    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton10ActionPerformed
+    private void addwhiteflowerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addwhiteflowerActionPerformed
+        ImageIcon icon = new ImageIcon(getClass().getResource("/images/white flower hoodie.png"));
+        Product product = new Product(icon, "HYPERPLAYER WHITE FLOWER", 680);
+        addingProduct(product);
+    }//GEN-LAST:event_addwhiteflowerActionPerformed
 
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
-        // TODO add your handling code here:
+        ImageIcon icon = new ImageIcon(getClass().getResource("/images/cross style hoodie.png"));
+        Product product = new Product(icon, "HYPERPLAYER CROSS", 680);
+        addingProduct(product);
     }//GEN-LAST:event_jButton11ActionPerformed
 
     private void accessoriesbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_accessoriesbtnActionPerformed
@@ -817,21 +862,25 @@ public class Main extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Main().setVisible(true);
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+            new Main().setVisible(true);
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton accessoriesbtn;
     private javax.swing.JPanel accessoriescard;
+    private javax.swing.JButton add8ball;
+    private javax.swing.JButton addDLTE;
+    private javax.swing.JButton addGV;
+    private javax.swing.JButton addacidwash;
+    private javax.swing.JButton addjapanese;
+    private javax.swing.JButton addjapanesewhite;
+    private javax.swing.JButton addwhiteflower;
+    private javax.swing.JButton addyzk;
     private javax.swing.JPanel cards;
     private javax.swing.JButton cartbtn;
     private javax.swing.JPanel cartcard;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton13;
@@ -840,12 +889,6 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JButton jButton16;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
