@@ -15,13 +15,23 @@ public class Accessory extends Product{
     private int amount;
     private double total;
     
-    Accessory(ImageIcon icon, String name, double price) {
+    Accessory(ImageIcon icon, String name, double price, int amount) {
         super(icon, name, price);
+        this.amount = amount;
+        this.total = price * amount;
     }
     
-    Accessory(ImageIcon icon, String name, double price, String color) {
-        super(icon, name, price);
-        super.name = super.name + "-" + color;
+    public void setColor(String color) {
+        super.name = super.name + color;
+    }
+    
+    public void addAmount(int amount) {
+        this.amount += amount;
+        this.total = this.price * this.amount;
+    }
+    
+    public int getAmount() {
+        return this.amount;
     }
     
 }

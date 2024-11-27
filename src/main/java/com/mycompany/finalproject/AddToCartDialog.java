@@ -16,7 +16,6 @@ public class AddToCartDialog extends java.awt.Dialog {
      * Creates new form AddToCartDialog
      */
     
-    int intAmount;
     ArrayList<Top> cart;
     Product product;
     
@@ -142,12 +141,16 @@ public class AddToCartDialog extends java.awt.Dialog {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(73, 73, 73)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(shirtIcon)
-                    .addComponent(price)
-                    .addComponent(shirtname))
-                .addGap(43, 43, 43)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(73, 73, 73)
+                        .addComponent(shirtIcon))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(shirtname, javax.swing.GroupLayout.DEFAULT_SIZE, 278, Short.MAX_VALUE)
+                            .addComponent(price, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(addbtn)
                     .addComponent(medium)
@@ -187,15 +190,15 @@ public class AddToCartDialog extends java.awt.Dialog {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(amount, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel2))
-                        .addGap(18, 18, 18))
+                        .addGap(18, 18, 18)
+                        .addComponent(addbtn)
+                        .addGap(14, 14, 14))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(18, 18, 18)
                         .addComponent(shirtname)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(addbtn)
-                    .addComponent(price))
-                .addGap(14, 14, 14))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(price)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
 
         pack();
@@ -223,6 +226,7 @@ public class AddToCartDialog extends java.awt.Dialog {
     }//GEN-LAST:event_amountActionPerformed
 
     private void smallActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_smallActionPerformed
+        
         
         deselectAll();
         small.setSelected(true);
@@ -309,21 +313,27 @@ public class AddToCartDialog extends java.awt.Dialog {
     }//GEN-LAST:event_addbtnActionPerformed
 
     private void mediumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mediumActionPerformed
+        
+        
         deselectAll();
         medium.setSelected(true);
     }//GEN-LAST:event_mediumActionPerformed
 
     private void largeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_largeActionPerformed
+        
+        
         deselectAll();
         large.setSelected(true);
     }//GEN-LAST:event_largeActionPerformed
 
     private void xlargeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_xlargeActionPerformed
+      
         deselectAll();
         xlarge.setSelected(true);
     }//GEN-LAST:event_xlargeActionPerformed
 
     private void xxxlargeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_xxxlargeActionPerformed
+       
         deselectAll();
         xxxlarge.setSelected(true);
     }//GEN-LAST:event_xxxlargeActionPerformed
