@@ -30,8 +30,16 @@ public class Accessory extends Product{
         this.total = this.price * this.amount;
     }
     
+    public void decreamentAmount() {
+        this.amount--;
+    }
+    
     public int getAmount() {
         return this.amount;
+    }
+    
+    public double getTotal() {
+        return this.total;
     }
     
 }

@@ -19,10 +19,13 @@ public class AddToCartDialogForAccessories extends java.awt.Dialog {
     Product product;
     ArrayList<Accessory> cart;
     boolean isDLTE = false;
+    Main parent;
     
     public AddToCartDialogForAccessories(java.awt.Frame parent, boolean modal, Product product, ArrayList<Accessory> cart) {
         super(parent, modal);
         initComponents();
+        setLocationRelativeTo(null);
+        this.parent = (Main) parent;
         setTitle(product.getProductName());
         icon.setIcon(product.getProductIcon());
         icon.repaint();
@@ -279,6 +282,7 @@ public class AddToCartDialogForAccessories extends java.awt.Dialog {
             
             if (acc.getProductName().equals(product.getProductName())) {
                 acc.addAmount(intAmount);
+                parent.renderCartPanel();
                 return;
             }
             
@@ -290,6 +294,10 @@ public class AddToCartDialogForAccessories extends java.awt.Dialog {
                 product.getProductPrice(),
                 intAmount);
         accessory.setColor(color);
+        
+        cart.add(accessory);
+        parent.renderCartPanel();
+        
         setVisible(false);
         dispose();
     }//GEN-LAST:event_addActionPerformed

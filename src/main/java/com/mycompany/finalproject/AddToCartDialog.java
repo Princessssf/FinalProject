@@ -18,10 +18,12 @@ public class AddToCartDialog extends java.awt.Dialog {
     
     ArrayList<Top> cart;
     Product product;
+    Main parent;
     
     public AddToCartDialog(java.awt.Frame parent, boolean modal, Product product, ArrayList<Top> cart) {
         super(parent, modal);
         initComponents();
+        this.parent = (Main) parent;
         this.setTitle(product.getProductName());
         setLocationRelativeTo(null);
         shirtIcon.setIcon(product.getProductIcon());
@@ -293,6 +295,7 @@ public class AddToCartDialog extends java.awt.Dialog {
                 
                 orderOnCart.addAmount(intAmount);
                 
+                parent.renderCartPanel();
                 setVisible(false);
                 dispose();
                 return;
@@ -307,7 +310,9 @@ public class AddToCartDialog extends java.awt.Dialog {
                 intAmount,
                 size);
         
-        cart.add(order);
+        cart.add(order);        
+        parent.renderCartPanel();
+        
         setVisible(false);
         dispose();
     }//GEN-LAST:event_addbtnActionPerformed

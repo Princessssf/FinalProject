@@ -32,6 +32,10 @@ public class Top extends Product{
         return this.amount;
     }
     
+    public void decreamentAmount() {
+        this.amount--;
+    }
+    
     public double getTotal() {
         return this.total;
     }

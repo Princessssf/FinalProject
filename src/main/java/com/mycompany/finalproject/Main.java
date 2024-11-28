@@ -6,6 +6,7 @@ package com.mycompany.finalproject;
 
 import java.util.ArrayList;
 import javax.swing.ImageIcon;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -40,6 +41,7 @@ public class Main extends javax.swing.JFrame {
         accessoriesbtn = new javax.swing.JButton();
         cartbtn = new javax.swing.JButton();
         jButton16 = new javax.swing.JButton();
+        historybtn = new javax.swing.JButton();
         cards = new javax.swing.JPanel();
         topscard = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
@@ -95,13 +97,19 @@ public class Main extends javax.swing.JFrame {
         addzztop = new javax.swing.JButton();
         jLabel34 = new javax.swing.JLabel();
         jLabel35 = new javax.swing.JLabel();
-        jButton15 = new javax.swing.JButton();
+        addsilverquick = new javax.swing.JButton();
         cartcard = new javax.swing.JPanel();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        cartPanel = new javax.swing.JPanel();
         sizescard = new javax.swing.JPanel();
         jScrollPane3 = new javax.swing.JScrollPane();
         jPanel4 = new javax.swing.JPanel();
         jLabel36 = new javax.swing.JLabel();
         jLabel37 = new javax.swing.JLabel();
+        historycard = new javax.swing.JPanel();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        historytbl = new javax.swing.JTable();
+        jLabel38 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setFocusCycleRoot(false);
@@ -109,7 +117,7 @@ public class Main extends javax.swing.JFrame {
         setResizable(false);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jLabel1.setText("HypeRlayer");
+        jLabel1.setText("Hyperplayer");
 
         topsbtn.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         topsbtn.setText("Tops");
@@ -143,17 +151,27 @@ public class Main extends javax.swing.JFrame {
             }
         });
 
+        historybtn.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        historybtn.setText("History");
+        historybtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                historybtnActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(52, 52, 52)
+                .addGap(46, 46, 46)
                 .addComponent(topsbtn)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addComponent(accessoriesbtn)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(cartbtn)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(historybtn)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton16, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(12, 12, 12))
@@ -166,7 +184,8 @@ public class Main extends javax.swing.JFrame {
                     .addComponent(topsbtn)
                     .addComponent(accessoriesbtn)
                     .addComponent(cartbtn)
-                    .addComponent(jButton16))
+                    .addComponent(jButton16)
+                    .addComponent(historybtn))
                 .addGap(14, 14, 14))
         );
 
@@ -542,8 +561,13 @@ public class Main extends javax.swing.JFrame {
         jLabel35.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel35.setText("HYPERPLAYER SILVER QUICK BRACELET");
 
-        jButton15.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jButton15.setText("Add to Cart");
+        addsilverquick.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        addsilverquick.setText("Add to Cart");
+        addsilverquick.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addsilverquickActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -613,7 +637,7 @@ public class Main extends javax.swing.JFrame {
                 .addContainerGap(378, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                        .addComponent(jButton15)
+                        .addComponent(addsilverquick)
                         .addGap(426, 426, 426))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                         .addComponent(jLabel35)
@@ -658,7 +682,7 @@ public class Main extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel35, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton15)
+                .addComponent(addsilverquick)
                 .addContainerGap(109, Short.MAX_VALUE))
         );
 
@@ -681,15 +705,25 @@ public class Main extends javax.swing.JFrame {
 
         cards.add(accessoriescard, "card3");
 
+        jScrollPane4.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+        jScrollPane4.setOpaque(true);
+
+        cartPanel.setLayout(new java.awt.GridLayout(0, 1, 10, 10));
+        jScrollPane4.setViewportView(cartPanel);
+
+        jScrollPane1.getVerticalScrollBar().setUnitIncrement(16);
+
         javax.swing.GroupLayout cartcardLayout = new javax.swing.GroupLayout(cartcard);
         cartcard.setLayout(cartcardLayout);
         cartcardLayout.setHorizontalGroup(
             cartcardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 997, Short.MAX_VALUE)
+            .addComponent(jScrollPane4)
         );
         cartcardLayout.setVerticalGroup(
             cartcardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 555, Short.MAX_VALUE)
+            .addGroup(cartcardLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane4))
         );
 
         cards.add(cartcard, "card4");
@@ -740,6 +774,71 @@ public class Main extends javax.swing.JFrame {
 
         cards.add(sizescard, "card5");
 
+        historytbl.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Product", "Type", "Size", "Price", "Amount", "Total", "Payment Method", "Paid Online", "Change", "Date"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Double.class, java.lang.Integer.class, java.lang.Double.class, java.lang.String.class, java.lang.Double.class, java.lang.Double.class, java.lang.String.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false, false, false, false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane5.setViewportView(historytbl);
+        if (historytbl.getColumnModel().getColumnCount() > 0) {
+            historytbl.getColumnModel().getColumn(0).setResizable(false);
+            historytbl.getColumnModel().getColumn(1).setResizable(false);
+            historytbl.getColumnModel().getColumn(2).setResizable(false);
+            historytbl.getColumnModel().getColumn(3).setResizable(false);
+            historytbl.getColumnModel().getColumn(4).setResizable(false);
+            historytbl.getColumnModel().getColumn(5).setResizable(false);
+            historytbl.getColumnModel().getColumn(6).setResizable(false);
+            historytbl.getColumnModel().getColumn(7).setResizable(false);
+            historytbl.getColumnModel().getColumn(8).setResizable(false);
+            historytbl.getColumnModel().getColumn(9).setResizable(false);
+        }
+
+        jLabel38.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel38.setText("History of Purchase");
+
+        javax.swing.GroupLayout historycardLayout = new javax.swing.GroupLayout(historycard);
+        historycard.setLayout(historycardLayout);
+        historycardLayout.setHorizontalGroup(
+            historycardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(historycardLayout.createSequentialGroup()
+                .addGap(60, 60, 60)
+                .addComponent(jLabel38)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(historycardLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 985, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        historycardLayout.setVerticalGroup(
+            historycardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(historycardLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel38)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 505, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        cards.add(historycard, "card6");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -764,6 +863,31 @@ public class Main extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+    
+    public DefaultTableModel getTableModel() {
+        return (DefaultTableModel) historytbl.getModel();
+    }
+    
+    public void renderCartPanel() {
+        cartPanel.removeAll();
+        
+        for (Top item: cart) {
+            ProductOnCartPanel itemPanel = new ProductOnCartPanel(this, item, cart);
+            itemPanel.setVisible(true);
+            cartPanel.add(itemPanel);
+        }
+        
+        for (Accessory item: cartAccessory) {
+            ProductOnCartPanel itemPanel = new ProductOnCartPanel(this, item, cartAccessory);
+            itemPanel.setVisible(true);
+            cartPanel.add(itemPanel);
+        }
+        
+        
+        cartPanel.repaint();
+        cartPanel.revalidate();
+        
+    }
     
     private void addingProduct(Product product) {
         AddToCartDialog dialog = new AddToCartDialog(this, true, product, cart);
@@ -802,7 +926,7 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_addacidwashActionPerformed
 
     private void addyzkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addyzkActionPerformed
-        ImageIcon icon = new ImageIcon(getClass().getResource("/images/yzkfront.png"));
+        ImageIcon icon = new ImageIcon(getClass().getResource("/images/yzkfront.jpg"));
         Product product = new Product(icon, "HYPERPLAYER YZK", 380);
         addingProduct(product);
     }//GEN-LAST:event_addyzkActionPerformed
@@ -814,13 +938,13 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_addjapaneseActionPerformed
 
     private void addjapanesewhiteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addjapanesewhiteActionPerformed
-        ImageIcon icon = new ImageIcon(getClass().getResource("/images/white japanese style hoodie.png"));
+        ImageIcon icon = new ImageIcon(getClass().getResource("/images/white japanese hoodie style.png"));
         Product product = new Product(icon, "HYPERPLAYER JAPANESE WHITE", 680);
         addingProduct(product);
     }//GEN-LAST:event_addjapanesewhiteActionPerformed
 
     private void addwhiteflowerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addwhiteflowerActionPerformed
-        ImageIcon icon = new ImageIcon(getClass().getResource("/images/white flower hoodie.png"));
+        ImageIcon icon = new ImageIcon(getClass().getResource("/images/white flower hoodie style.png"));
         Product product = new Product(icon, "HYPERPLAYER WHITE FLOWER", 680);
         addingProduct(product);
     }//GEN-LAST:event_addwhiteflowerActionPerformed
@@ -890,6 +1014,19 @@ public class Main extends javax.swing.JFrame {
         addingProductAccessory(accessory);
     }//GEN-LAST:event_addsilverActionPerformed
 
+    private void addsilverquickActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addsilverquickActionPerformed
+        ImageIcon icon = new ImageIcon(getClass().getResource("/images/silverquick .png"));
+        Product accessory = new Product(icon, "HYPERPLAYER Silver", 75);
+        addingProductAccessory(accessory);
+    }//GEN-LAST:event_addsilverquickActionPerformed
+
+    private void historybtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_historybtnActionPerformed
+        cards.removeAll();
+        cards.add(historycard);
+        cards.repaint();
+        cards.revalidate();
+    }//GEN-LAST:event_historybtnActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -936,14 +1073,18 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JButton addjapanesewhite;
     private javax.swing.JButton addmontblanc;
     private javax.swing.JButton addsilver;
+    private javax.swing.JButton addsilverquick;
     private javax.swing.JButton addwhiteflower;
     private javax.swing.JButton addyzk;
     private javax.swing.JButton addzztop;
     private javax.swing.JPanel cards;
+    private javax.swing.JPanel cartPanel;
     private javax.swing.JButton cartbtn;
     private javax.swing.JPanel cartcard;
+    private javax.swing.JButton historybtn;
+    private javax.swing.JPanel historycard;
+    private javax.swing.JTable historytbl;
     private javax.swing.JButton jButton11;
-    private javax.swing.JButton jButton15;
     private javax.swing.JButton jButton16;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -976,6 +1117,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel35;
     private javax.swing.JLabel jLabel36;
     private javax.swing.JLabel jLabel37;
+    private javax.swing.JLabel jLabel38;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -989,6 +1131,8 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JPanel sizescard;
     private javax.swing.JButton topsbtn;
     private javax.swing.JPanel topscard;
