@@ -260,6 +260,11 @@ public class BuyDialog extends java.awt.Dialog {
             tbl.addRow(row);
         }
         
+        if (itemT != null)
+            deleteItem(itemT);
+        else
+            deleteItem(itemA);
+        
         parent.renderCartPanel();
         setVisible(false);
         dispose();
